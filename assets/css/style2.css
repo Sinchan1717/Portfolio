@@ -1,0 +1,263 @@
+/* Skills Section */
+.skill {
+    padding: 50px 0;
+    background: var(--color-light-grey);
+    text-align: center;
+}
+
+.skills-title {
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-item {
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s;
+}
+
+.skills-item:hover {
+    transform: translateY(-5px);
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.h5 {
+    font-size: 1.25rem;
+    color: var(--color-dark-grey);
+}
+
+.skill-progress-bg {
+    width: 100%;
+    height: 10px;
+    background: var(--color-grey);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    background: var(--first-color);
+    border-radius: 5px;
+}
+
+/* Container for the column */
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Skills Box */
+.skills-box {
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s;
+}
+
+.skills-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills Header */
+.skills-header {
+    margin-bottom: 10px;
+}
+
+.skills-header h3 {
+    font-size: 1.5rem;
+    color: var(--color-dark-grey);
+    text-align: center;
+}
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list span {
+    background: var(--color-light-grey);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    color: var(--color-dark-grey);
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .skills-item,
+    .skills-box {
+        width: 90%;
+    }
+    
+}
+
+
+/* ----- PROJECTS BOX ----- */
+/* ----- PROJECTS BOX ----- */
+.project-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* .project-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s; 
+} */
+
+.project-box > i {
+    font-size: 50px;
+    color: #005ce7;
+    margin-bottom: 25px;
+}
+
+.project-box h3 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.project-box label {
+    font-size: 15px;
+    color: #777;
+}
+
+.project-box img {
+    position: absolute;
+    top: 100%; /* Initially position the image outside the box */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: top 0.4s ease-in-out; /* Smooth transition for top position */
+    z-index: -1; /* Behind the content */
+}
+
+.project-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(93, 93, 93, 0.5); /* Overlay background */
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s;
+    z-index: 1;
+    opacity: 0; /* Initially hidden */
+}
+
+.project-box:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.project-box:hover img {
+    top: 0; /* Move image to top on hover */
+    z-index: 0; /* Bring image in front of overlay */
+}
+
+.project-box:hover i,
+.project-box:hover h3,
+.project-box:hover label {
+    color: var(--color-white);
+    z-index: 2;
+}
+
+.project-box:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.github-button {
+    position: relative;
+    z-index: 3; /* Ensure the button is above other elements */
+    padding: 10px 20px;
+    background-color: rgb(0, 90, 217);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Space between the label and the button */
+}
+
+.github-button:hover {
+    background-color: #042799;
+    color: white;
+}
+
+.github-button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+/* head icons */
+.social_icons .icon a {
+    color: #000; /* Default icon color */
+    text-decoration: none;
+}
+
+.social_icons .icon a:hover {
+    color: rgb(0, 90, 217); /* Change this color to whatever you want for hover effect */
+}
+
+
+/* footer icons */
+.footer-social-icons .icon a {
+    color: #000; /* Default icon color */
+    text-decoration: none;
+}
+
+.footer-social-icons .icon a:hover {
+    color: rgb(0, 90, 217); /* Change this color to whatever you want for hover effect */
+}
